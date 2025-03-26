@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment ChatBot</title>
+    <style>
+        /* Dark Theme with Purple Tones */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #1a001f; /* Dark Purple */
+            color: white;
+        }
+
+        .chatbox {
+            width: 50%;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            background: #2d0036; /* Deep Purple */
+            box-shadow: 0 0 15px rgba(155, 89, 182, 0.5); /* Soft Purple Glow */
+        }
+
+        .message {
+            display: flex;
+            margin: 10px;
+        }
+
+        .user {
+            background: #03dac6; /* Teal */
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            max-width: 85%;
+        }
+
+        .bot {
+            background: #6200ea; /* Bright Purple */
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            max-width: 85%;
+        }
+
+        input, button {
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input {
+            background: #3a003f; /* Darker Purple */
+            color: white;
+            outline: none;
+            width: 60%;
+        }
+
+        button {
+            background: #bb86fc; /* Light Purple */
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        button:hover {
+            background: #9c4dcc; /* Slightly Darker Purple */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sentiment ChatBot</h1>
+    <div class="chatbox">
+        {% for chat in chat_history %}
+            <div class="message">
+                <div class="user">You: {{ chat["You"] }}</div>
+            </div>
+            <div class="message">
+                <div class="bot">Chatbot: {{ chat["Chatbot"] }}</div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <form method="POST">
+        <input type="text" name="text" placeholder="Type a message...">
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>
