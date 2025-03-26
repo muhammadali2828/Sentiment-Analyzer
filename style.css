@@ -1,0 +1,86 @@
+/* Dark Theme with Purple Tones */
+body {
+    font-family: Arial, sans-serif;
+    background: #1a001f; /* Dark Purple */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 450px;
+    background: #2d0036; /* Deep Purple */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.5); /* Soft Purple Glow */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h2 {
+    color: #bb86fc; /* Light Purple */
+}
+
+.chat-box {
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-bottom: 2px solid #bb86fc; /* Light Purple Border */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Chat Messages */
+.bot-message, .user-message {
+    padding: 12px;
+    margin: 8px;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 85%;
+}
+
+.bot-message {
+    background: #6200ea; /* Bright Purple */
+    color: white;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #03dac6; /* Teal */
+    color: black;
+    align-self: flex-end;
+}
+
+/* Input and Button */
+form {
+    display: flex;
+    margin-top: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #3a003f; /* Darker Purple */
+    color: white;
+    outline: none;
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    background: #bb86fc; /* Light Purple */
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #9c4dcc; /* Slightly Darker Purple */
+}
